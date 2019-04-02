@@ -22,16 +22,17 @@ class App extends Component {
     return (
       <Wrapper>
         <h1 className="title">European Country Flags</h1>
-        {this.state.flags.map(flag => (
-          <FlagCard
-            isClicked = {this.isClicked}
-            id = {flag.id}
-            key = {flag.id}
-            name = {flag.name}
-            image = {flag.image}
-          />
-        ))}
-
+        <div className="container">
+          {this.state.flags.map(flag => (
+            <FlagCard
+              isClicked = {this.isClicked}
+              id = {flag.id}
+              key = {flag.id}
+              name = {flag.name}
+              image = {flag.image}
+            />
+          ))}
+        </div>
       </Wrapper>
     )
   }
