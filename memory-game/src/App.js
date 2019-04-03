@@ -17,8 +17,12 @@ class App extends Component {
 
   // Function to show a card has been clicked
   handleClick = id => {
-    this.setState({ isClicked: true});
-    console.log(this.state.isClicked);
+    console.log(this.state.flags[id-1]);
+    let target = this.state.flags[id-1];
+    console.log(target);
+    console.log(id);
+    // target.setState({ isClicked: true});
+    // console.log(`${this.name} has been clicked is ${this.state.isClicked}`);
   };
 
 
@@ -30,8 +34,8 @@ class App extends Component {
         <div className="container">
           {this.state.flags.map(flag => (
             <FlagCard
-              handleClick={this.handleClick}
-              isClicked = {this.isClicked}
+              handleClick ={this.handleClick}
+              isClicked = {false}
               id = {flag.id}
               key = {flag.id}
               name = {flag.name}
