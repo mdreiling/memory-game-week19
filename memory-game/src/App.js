@@ -5,7 +5,8 @@ import flags from "../src/flags.json";
 
 class App extends Component {
   state = {
-    flags
+    flags,
+    isClicked: false
   };
 
   // Function to randomize cards that are being shown
@@ -15,16 +16,21 @@ class App extends Component {
   // };
 
   // Function to show a card has been clicked
+  handleClick = id => {
+    this.setState({ isClicked: true});
+    console.log(this.state.isClicked);
+  };
 
 
   // Render function 
   render() {
     return (
       <Wrapper>
-        <h1 className="title">World Country Flag Memory Game</h1>
+        <h2 className="title">World Country Flag Memory Game</h2>
         <div className="container">
           {this.state.flags.map(flag => (
             <FlagCard
+              handleClick={this.handleClick}
               isClicked = {this.isClicked}
               id = {flag.id}
               key = {flag.id}
