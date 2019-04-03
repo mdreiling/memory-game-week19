@@ -1,253 +1,203 @@
 [
     {
         "id": 1,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Flag_of_Albania.svg",
-        "name": "Flag of Albania"
-    },
-    {
-        "id": 2,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/1/19/Flag_of_Andorra.svg",
-        "name": "Flag of Andorra"
-    },
-    {
-        "id": 3,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Flag_of_Armenia.svg",
-        "name": "Flag of Armenia"
-    },
-    {
-        "id": 4,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/800px-Flag_of_Austria.svg.png",
         "name": "Flag of Austria"
     },
     {
+        "id": 2,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/800px-Flag_of_Barbados.svg.png",
+        "name": "Flag of Barbados"
+    },
+    {
+        "id": 3,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/800px-Flag_of_Benin.svg.png",
+        "name": "Flag of Benin"
+    },
+    {
+        "id": 4,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Flag_of_Bhutan.svg/800px-Flag_of_Bhutan.svg.png",
+        "name": "Flag of Bhutan"
+    },
+    {
         "id": 5,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Flag_of_Azerbaijan.svg",
-        "name": "Flag of Azerbaijan"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/800px-Flag_of_Botswana.svg.png",
+        "name": "Flag of Botswana"
     },
     {
         "id": 6,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/85/Flag_of_Belarus.svg",
-        "name": "Flag of Belarus"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/800px-Flag_of_Burkina_Faso.svg.png",
+        "name": "Flag of Burkina Faso"
     },
     {
         "id": 7,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/65/Flag_of_Belgium.svg",
-        "name": "Flag of Belgium"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/800px-Flag_of_Cameroon.svg.png",
+        "name": "Flag of Cameroon"
     },
     {
         "id": 8,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Flag_of_Bosnia_and_Herzegovina.svg",
-        "name": "Flag of Bosnia and Herzegovina"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Flag_of_Chad.svg/800px-Flag_of_Chad.svg.png",
+        "name": "Flag of Chad"
     },
     {
         "id": 9,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Bulgaria.svg",
-        "name": "Flag of Bulgaria"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/800px-Flag_of_Chile.svg.png",
+        "name": "Flag of Chile"
     },
     {
         "id": 10,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Flag_of_Croatia.svg",
-        "name": "Flag of Croatia"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Flag_of_the_Republic_of_China.svg/800px-Flag_of_the_Republic_of_China.svg.png",
+        "name": "Flag of Taiwan"
     },
     {
         "id": 11,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg",
-        "name": "Flag of Cyprus"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/800px-Flag_of_Colombia.svg.png",
+        "name": "Flag of Colombia"
     },
     {
         "id": 12,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg",
-        "name": "Flag of the Czech Republic"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/800px-Flag_of_the_Republic_of_the_Congo.svg.png",
+        "name": "Flag of the Republic of Congo"
     },
     {
         "id": 13,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Denmark.svg",
-        "name": "Flag of Denmark"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/800px-Flag_of_Djibouti.svg.png",
+        "name": "Flag of Djibouti"
     },
     {
         "id": 14,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Flag_of_Estonia.svg",
-        "name": "Flag of Estonia"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/800px-Flag_of_Ecuador.svg.png",
+        "name": "Flag of Ecuador"
     },
     {
         "id": 15,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_Finland.svg",
-        "name": "Flag of Finland"
-    },
-    {
-        "id": 16,
-        "image": "https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/800px-Flag_of_France.svg.png",
         "name": "Flag of France"
     },
     {
+        "id": 16,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/800px-Flag_of_The_Gambia.svg.png",
+        "name": "Flag of Gambia"
+    },
+    {
         "id": 17,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Flag_of_Georgia.svg",
-        "name": "Flag of Georgia"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/800px-Flag_of_Ghana.svg.png",
+        "name": "Flag of Ghana"
     },
     {
         "id": 18,
-        "image": "https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg",
-        "name": "Flag of Germany"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_Guinea.svg/800px-Flag_of_Guinea.svg.png",
+        "name": "Flag of Guinea"
     },
     {
         "id": 19,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Greece.svg",
-        "name": "Flag of Greece"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/800px-Flag_of_Indonesia.svg.png",
+        "name": "Flag of Indonesia"
     },
     {
         "id": 20,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Flag_of_Hungary.svg",
-        "name": "Flag of Hungary"
-    },
-    {
-        "id": 21,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Flag_of_Iceland.svg",
-        "name": "Flag of Iceland"
-    },
-    {
-        "id": 22,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/Flag_of_Ireland.svg",
-        "name": "Flag of Ireland"
-    },
-    {
-        "id": 23,
-        "image": "https://upload.wikimedia.org/wikipedia/en/0/03/Flag_of_Italy.svg",
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/800px-Flag_of_Italy.svg.png",
         "name": "Flag of Italy"
     },
     {
+        "id": 21,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/800px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png",
+        "name": "Flag of Ivory Coast"
+    },
+    {
+        "id": 22,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Madagascar.svg/800px-Flag_of_Madagascar.svg.png",
+        "name": "Flag of Madagascar"
+    },
+    {
+        "id": 23,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/800px-Flag_of_Mali.svg.png",
+        "name": "Flag of Mali"
+    },
+    {
         "id": 24,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Flag_of_Kazakhstan.svg",
-        "name": "Flag of Kazakhstan"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Flag_of_Myanmar.svg/800px-Flag_of_Myanmar.svg.png",
+        "name": "Flag of Myanmar"
     },
     {
         "id": 25,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/8/84/Flag_of_Latvia.svg",
-        "name": "Flag of Latvia"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/800px-Flag_of_Namibia.svg.png",
+        "name": "Flag of Namibia"
     },
     {
         "id": 26,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/47/Flag_of_Liechtenstein.svg",
-        "name": "Flag of Liechtenstein"
-    },
-    {
-        "id": 27,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/1/11/Flag_of_Lithuania.svg",
-        "name": "Flag of Lithuania"
-    },
-    {
-        "id": 28,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/d/da/Flag_of_Luxembourg.svg",
-        "name": "Flag of Luxembourg"
-    },
-    {
-        "id": 29,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Malta.svg",
-        "name": "Flag of Malta"
-    },
-    {
-        "id": 30,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/27/Flag_of_Moldova.svg",
-        "name": "Flag of Moldova"
-    },
-    {
-        "id": 31,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Flag_of_Monaco.svg",
-        "name": "Flag of Monaco"
-    },
-    {
-        "id": 32,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/64/Flag_of_Montenegro.svg",
-        "name": "Flag of Montenegro"
-    },
-    {
-        "id": 33,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/800px-Flag_of_the_Netherlands.svg.png",
         "name": "Flag of the Netherlands"
     },
     {
-        "id": 34,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_North_Macedonia.svg",
-        "name": "Flag of North Macedonia"
+        "id": 27,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/800px-Flag_of_Peru.svg.png",
+        "name": "Flag of Peru"
     },
     {
-        "id": 35,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Norway.svg",
-        "name": "Flag of Norway"
-    },
-    {
-        "id": 36,
-        "image": "https://upload.wikimedia.org/wikipedia/en/1/12/Flag_of_Poland.svg",
-        "name": "Flag of Poland"
-    },
-    {
-        "id": 37,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg",
-        "name": "Flag of Portugal"
-    },
-    {
-        "id": 38,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Flag_of_Romania.svg",
-        "name": "Flag of Romania"
-    },
-    {
-        "id": 39,
-        "image": "https://upload.wikimedia.org/wikipedia/en/f/f3/Flag_of_Russia.svg",
+        "id": 28,
+        "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/800px-Flag_of_Russia.svg.png",
         "name": "Flag of Russia"
     },
     {
-        "id": 40,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Flag_of_San_Marino.svg",
-        "name": "Flag of San Marino"
+        "id": 29,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/800px-Flag_of_Saint_Kitts_and_Nevis.svg.png",
+        "name": "Flag of Saint Kitts and Nevis"
     },
     {
-        "id": 41,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Flag_of_Serbia.svg",
-        "name": "Flag of Serbia"
+        "id": 30,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/800px-Flag_of_Senegal.svg.png",
+        "name": "Flag of Senegal"
     },
     {
-        "id": 42,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Flag_of_Slovakia.svg",
-        "name": "Flag of Slovakia"
+        "id": 31,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/800px-Flag_of_Singapore.svg.png",
+        "name": "Flag of Singapore"
     },
     {
-        "id": 43,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Flag_of_Slovenia.svg",
-        "name": "Flag of Slovenia"
+        "id": 32,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/800px-Flag_of_Suriname.svg.png",
+        "name": "Flag of Suriname"
     },
     {
-        "id": 44,
-        "image": "https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg",
-        "name": "Flag of Spain"
+        "id": 33,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/800px-Flag_of_Tanzania.svg.png",
+        "name": "Flag of Tanzania"
     },
     {
-        "id": 45,
-        "image": "https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg",
-        "name": "Flag of Sweden"
+        "id": 34,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/800px-Flag_of_Thailand.svg.png",
+        "name": "Flag of Thailand"
     },
     {
-        "id": 46,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/08/Flag_of_Switzerland_%28Pantone%29.svg",
-        "name": "Flag of Switzerland"
+        "id": 35,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/800px-Flag_of_Tunisia.svg.png",
+        "name": "Flag of Tunisia"
     },
     {
-        "id": 47,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg",
+        "id": 36,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/800px-Flag_of_Turkey.svg.png",
         "name": "Flag of Turkey"
     },
     {
-        "id": 48,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg",
+        "id": 37,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/800px-Flag_of_Uganda.svg.png",
+        "name": "Flag of Uganda"
+    },
+    {
+        "id": 38,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/800px-Flag_of_Ukraine.svg.png",
         "name": "Flag of Ukraine"
     },
     {
-        "id": 49,
-        "image": "https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg",
-        "name": "Flag of the United Kingdom"
+        "id": 39,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Flag_of_Venezuela_%28state%29.svg/800px-Flag_of_Venezuela_%28state%29.svg.png",
+        "name": "Flag of Venezuela"
     },
     {
-        "id": 50,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/0/00/Flag_of_the_Vatican_City.svg",
-        "name": "Flag of the Vatican City"
+        "id": 40,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/800px-Flag_of_Vietnam.svg.png",
+        "name": "Flag of Vietnam"
     }
 ]
 
