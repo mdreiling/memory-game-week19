@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <h1 className="title">European Country Flags</h1>
+        <h1 className="title">World Country Flag Memory Game</h1>
         <div className="container">
           {this.state.flags.map(flag => (
             <FlagCard
