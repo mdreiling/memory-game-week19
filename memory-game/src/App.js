@@ -21,13 +21,18 @@ class App extends Component {
       clickedCard.setState({ isClicked: true });
       this.handleScore();
     } else {
-      alert("This flag has been clicked. Game Over");
+      this.gameReset();
     }
   };
 
   handleScore = () => {
     this.setState({ score: this.state.score + 1 });
   };
+
+  gameReset = () => {
+    console.log("Game over");
+    this.setState({ score: 0 });
+  }
 
 
   // Render function 
