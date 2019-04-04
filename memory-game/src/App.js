@@ -26,9 +26,8 @@ class App extends Component {
   };
 
   handleScore = () => {
-    console.log(this.state.score);
-    // this.setState( score: this.score++)
-  }
+    this.setState({ score: this.state.score + 1 });
+  };
 
 
   // Render function 
@@ -36,6 +35,7 @@ class App extends Component {
     return (
       <Wrapper>
         <h2 className="title">World Flag Memory Game</h2>
+        <h4 className="score">{this.state.score}</h4>
         <div className="container">
           {this.state.flags.map((flag) => (
             <FlagCard
