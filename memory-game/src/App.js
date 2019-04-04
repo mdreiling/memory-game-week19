@@ -6,7 +6,7 @@ import flags from "../src/flags.json";
 class App extends Component {
   state = {
     flags,
-    isClicked: false
+    score: 0
   };
 
   // Function to randomize cards that are being shown
@@ -16,26 +16,30 @@ class App extends Component {
   // };
 
   // Function to show a card has been clicked
-  handleClick = id => {
-    console.log(this.state.flags[id-1]);
-    let target = this.state.flags[id-1];
-    console.log(target);
-    console.log(id);
-    // target.setState({ isClicked: true});
-    // console.log(`${this.name} has been clicked is ${this.state.isClicked}`);
+  handleClick = clickedCard => {
+    if (!clickedCard.state.isClicked) {
+      clickedCard.setState({ isClicked: true });
+      this.handleScore();
+    } else {
+      alert("This flag has been clicked. Game Over");
+    }
   };
+
+  handleScore = () => {
+    console.log(this.state.score);
+    // this.setState( score: this.score++)
+  }
 
 
   // Render function 
   render() {
     return (
       <Wrapper>
-        <h2 className="title">World Country Flag Memory Game</h2>
+        <h2 className="title">World Flag Memory Game</h2>
         <div className="container">
-          {this.state.flags.map(flag => (
+          {this.state.flags.map((flag) => (
             <FlagCard
-              handleClick ={this.handleClick}
-              isClicked = {false}
+              handleClick = {this.handleClick}
               id = {flag.id}
               key = {flag.id}
               name = {flag.name}
