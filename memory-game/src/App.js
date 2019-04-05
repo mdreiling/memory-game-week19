@@ -3,11 +3,9 @@ import FlagCard from "./components/FlagCard";
 import Wrapper from "./components/Wrapper";
 import flags from "../src/flags.json";
 
-const allFlags = flags;
-
 class App extends Component {
   state = {
-    allFlags,
+    flags,
     score: 0,
     selectedFlags: []
   };
@@ -15,15 +13,27 @@ class App extends Component {
 
   // Calling randomFlag function to initialize the game
   componentDidMount() {
-    this.randomFlag(allFlags);
+    this.randomFlag();
   }
   
   // Function to randomize cards that are being shown
-  randomFlag = allFlags => {
+  randomFlag = () => {
 
-    // // Reset arrays
-    // this.setState({ selectedFlags: [] });
-    // let randomFlag = [];
+    // Reset Selected flags array on state
+    this.setState({ selectedFlags: [] });
+
+    const shuffleState = {...this.state};
+    console.log(shuffleState);
+
+    // // Set up shuffle function
+    // const shuffle = function(array) {
+    //   array.sort(() => Math.random() - 0.5);
+    // };
+
+    // // Call shuffle function and pass in flagArray
+    // shuffle(flagArray);
+    // console.log(flagArray)
+    
 
     // // For loop to select random flags to display
     // for (var i = 0; i < 16; i++) {  
@@ -33,8 +43,8 @@ class App extends Component {
     // // Set state of selected flags array with the newly made random flag array
     // this.setState({ selectedFlags: randomFlag });
 
-    // Dummy set state for testing
-    this.setState({ selectedFlags: allFlags });
+    // Set selected flag array on state which will be used throughout app
+    this.setState({ selectedFlags: this.state.flags });
   };
 
   // Function to show a card has been clicked
@@ -47,7 +57,7 @@ class App extends Component {
     if (!clickedCard.isClicked) {
 
       // Change status of clicked flag
-      clickedState.allFlags[clickedCard.id-1].isClicked = true;
+      clickedState.selectedFlags[clickedCard.id-1].isClicked = true;
 
       // Update app state with array 
       this.setState(clickedState);
@@ -71,8 +81,8 @@ class App extends Component {
     
     // For loop to change all flag's click status to false
     let i;
-    for (i = 0; i < resetState.allFlags.length; i++) {
-      resetState.allFlags[i].isClicked = false;
+    for (i = 0; i < resetState.selectedFlags.length; i++) {
+      resetState.selectedFlags[i].isClicked = false;
     }
 
     // Set app state to updated reset state and reset score to 0
