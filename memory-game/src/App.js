@@ -3,11 +3,9 @@ import FlagCard from "./components/FlagCard";
 import Wrapper from "./components/Wrapper";
 import flags from "../src/flags.json";
 
-const allFlags = flags;
-
 class App extends Component {
   state = {
-    allFlags,
+    flags,
     score: 0,
     selectedFlags: []
   };
@@ -15,26 +13,35 @@ class App extends Component {
 
   // Calling randomFlag function to initialize the game
   componentDidMount() {
-    this.randomFlag(allFlags);
+    this.randomFlag(flags);
   }
   
   // Function to randomize cards that are being shown
-  randomFlag = allFlags => {
+  randomFlag = flagArray => {
 
-    // // Reset arrays
-    // this.setState({ selectedFlags: [] });
-    // let randomFlag = [];
+    const shuffleState = {...this.state};
+    console.log("Shuffle state log")
+    console.log(shuffleState)
+
+    const shuffle = function(array) {
+      array.sort(() => Math.random() - 0.5)
+    }
+
+    let shuffleFlags = flagArray;
+    shuffle(shuffleFlags);
+    // console.log(shuffleFlags);
 
     // // For loop to select random flags to display
     // for (var i = 0; i < 16; i++) {  
-    //   randomFlag.push(allFlags[Math.floor(Math.random()*allFlags.length)]);
+    //   selectedArray.push(allFlags[Math.floor(Math.random()*allFlags.length)]);
     // }
 
     // // Set state of selected flags array with the newly made random flag array
     // this.setState({ selectedFlags: randomFlag });
 
     // Dummy set state for testing
-    this.setState({ selectedFlags: allFlags });
+    this.setState({ selectedFlags: this.state.flags });
+    // console.log(this);
   };
 
   // Function to show a card has been clicked
@@ -47,11 +54,12 @@ class App extends Component {
     if (!clickedCard.isClicked) {
 
       // Change status of clicked flag
-      clickedState.allFlags[clickedCard.id-1].isClicked = true;
+      clickedState.selectedFlags[clickedCard.id-1].isClicked = true;
 
       // Update app state with array 
       this.setState(clickedState);
       this.handleScore();
+      this.randomFlag(this.state.selectedFlags);
     } else {
       this.gameReset();
     }
@@ -71,13 +79,14 @@ class App extends Component {
     
     // For loop to change all flag's click status to false
     let i;
-    for (i = 0; i < resetState.allFlags.length; i++) {
-      resetState.allFlags[i].isClicked = false;
+    for (i = 0; i < resetState.flags.length; i++) {
+      resetState.flags[i].isClicked = false;
     }
 
-    // Set app state to updated reset state and reset score to 0
+    // Set app state to updated reset state, reset score to 0, and select flags for new game
     this.setState(resetState);
     this.setState({ score: 0 });
+    this.randomFlag(flags);
   }
 
   // Render function 
@@ -86,7 +95,7 @@ class App extends Component {
       <Wrapper>
         <h2 className="title">World Flag Memory Game</h2>
         <h4 className="score">{this.state.score}</h4>
-        <div className="container">
+        <div>
           {this.state.selectedFlags.map((flag) => (
             <FlagCard
               handleClick = {this.handleClick}
