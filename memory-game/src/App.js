@@ -13,35 +13,38 @@ class App extends Component {
 
   // Calling randomFlag function to initialize the game
   componentDidMount() {
-    this.randomFlag(flags);
+    this.randomFlag();
   }
   
   // Function to randomize cards that are being shown
-  randomFlag = flagArray => {
+  randomFlag = () => {
+
+    // Reset Selected flags array on state
+    this.setState({ selectedFlags: [] });
 
     const shuffleState = {...this.state};
-    console.log("Shuffle state log")
-    console.log(shuffleState)
+    console.log(shuffleState);
 
-    const shuffle = function(array) {
-      array.sort(() => Math.random() - 0.5)
-    }
+    // // Set up shuffle function
+    // const shuffle = function(array) {
+    //   array.sort(() => Math.random() - 0.5);
+    // };
 
-    let shuffleFlags = flagArray;
-    shuffle(shuffleFlags);
-    // console.log(shuffleFlags);
+    // // Call shuffle function and pass in flagArray
+    // shuffle(flagArray);
+    // console.log(flagArray)
+    
 
     // // For loop to select random flags to display
     // for (var i = 0; i < 16; i++) {  
-    //   selectedArray.push(allFlags[Math.floor(Math.random()*allFlags.length)]);
+    //   randomFlag.push(allFlags[Math.floor(Math.random()*allFlags.length)]);
     // }
 
     // // Set state of selected flags array with the newly made random flag array
     // this.setState({ selectedFlags: randomFlag });
 
-    // Dummy set state for testing
+    // Set selected flag array on state which will be used throughout app
     this.setState({ selectedFlags: this.state.flags });
-    // console.log(this);
   };
 
   // Function to show a card has been clicked
@@ -59,7 +62,6 @@ class App extends Component {
       // Update app state with array 
       this.setState(clickedState);
       this.handleScore();
-      this.randomFlag(this.state.selectedFlags);
     } else {
       this.gameReset();
     }
@@ -79,14 +81,13 @@ class App extends Component {
     
     // For loop to change all flag's click status to false
     let i;
-    for (i = 0; i < resetState.flags.length; i++) {
-      resetState.flags[i].isClicked = false;
+    for (i = 0; i < resetState.selectedFlags.length; i++) {
+      resetState.selectedFlags[i].isClicked = false;
     }
 
-    // Set app state to updated reset state, reset score to 0, and select flags for new game
+    // Set app state to updated reset state and reset score to 0
     this.setState(resetState);
     this.setState({ score: 0 });
-    this.randomFlag(flags);
   }
 
   // Render function 
@@ -95,7 +96,7 @@ class App extends Component {
       <Wrapper>
         <h2 className="title">World Flag Memory Game</h2>
         <h4 className="score">{this.state.score}</h4>
-        <div>
+        <div className="container">
           {this.state.selectedFlags.map((flag) => (
             <FlagCard
               handleClick = {this.handleClick}
