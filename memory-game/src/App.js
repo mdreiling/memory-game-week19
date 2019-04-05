@@ -12,22 +12,45 @@ class App extends Component {
     selectedFlags: []
   };
 
+
+  // Calling randomFlag function to initialize the game
+  componentDidMount() {
+    this.randomFlag(allFlags);
+  }
+  
   // Function to randomize cards that are being shown
   randomFlag = allFlags => {
-    // console.log(allFlags);
-    for (var i = 0; i < 16; i++) {
-        this.state.selectedFlags.push(allFlags[Math.floor(Math.random()*allFlags.length)]);
-    }
-    console.log(this.state.selectedFlags);
+
+    // // Reset arrays
+    // this.setState({ selectedFlags: [] });
+    // let randomFlag = [];
+
+    // // For loop to select random flags to display
+    // for (var i = 0; i < 16; i++) {  
+    //   randomFlag.push(allFlags[Math.floor(Math.random()*allFlags.length)]);
+    // }
+
+    // // Set state of selected flags array with the newly made random flag array
+    // this.setState({ selectedFlags: randomFlag });
+
+    // Dummy set state for testing
+    this.setState({ selectedFlags: allFlags });
   };
 
   // Function to show a card has been clicked
   handleClick = clickedCard => {
     // console.log(clickedCard);
+    // console.log(this.state.allFlags[clickedCard.id]);
+
+    const clickedArray = {...this.state};
+    console.log(clickedArray.allFlags);
     if (!clickedCard.isClicked) {
-      // clickedCard.isClicked = true;
-      console.log(clickedCard.isClicked);
+      clickedArray.allFlags[clickedCard.id-1].isClicked = true;
+      console.log(clickedArray.allFlags[clickedCard.id-1]);
+      this.setState(clickedArray);
+      // console.log(clickedCard.isClicked);
       this.handleScore();
+      // this.randomFlag(allFlags);
     } else {
       this.gameReset();
     }
@@ -45,12 +68,6 @@ class App extends Component {
     console.log(this);
   }
 
-  // Calling randomFlag function to initialize the game
-  componentDidMount() {
-    this.randomFlag(allFlags);
-    console.log(this);
-  }
-
   // Render function 
   render() {
     return (
@@ -58,10 +75,10 @@ class App extends Component {
         <h2 className="title">World Flag Memory Game</h2>
         <h4 className="score">{this.state.score}</h4>
         <div className="container">
-          {this.state.allFlags.map((flag) => (
+          {this.state.selectedFlags.map((flag) => (
             <FlagCard
               handleClick = {this.handleClick}
-              isClicked = {false}
+              isClicked = {flag.isClicked}
               id = {flag.id}
               key = {flag.id}
               name = {flag.name}
