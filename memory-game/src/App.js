@@ -39,18 +39,19 @@ class App extends Component {
 
   // Function to show a card has been clicked
   handleClick = clickedCard => {
-    // console.log(clickedCard);
-    // console.log(this.state.allFlags[clickedCard.id]);
 
-    const clickedArray = {...this.state};
-    console.log(clickedArray.allFlags);
+    // Create a duplicate of state so that the status of the clicked flag can be changed
+    const clickedState = {...this.state};
+
+    // If/else statement to handle game logic
     if (!clickedCard.isClicked) {
-      clickedArray.allFlags[clickedCard.id-1].isClicked = true;
-      console.log(clickedArray.allFlags[clickedCard.id-1]);
-      this.setState(clickedArray);
-      // console.log(clickedCard.isClicked);
+
+      // Change status of clicked flag
+      clickedState.allFlags[clickedCard.id-1].isClicked = true;
+
+      // Update app state with array 
+      this.setState(clickedState);
       this.handleScore();
-      // this.randomFlag(allFlags);
     } else {
       this.gameReset();
     }
@@ -63,9 +64,20 @@ class App extends Component {
 
   // Function to reset the game when a flag is clicked for the second time
   gameReset = () => {
-    alert("Game over");
+
+    // Set click status of all flags to false
+    // Create duplicate state so flag status can be updated
+    const resetState = {...this.state};
+    
+    // For loop to change all flag's click status to false
+    let i;
+    for (i = 0; i < resetState.allFlags.length; i++) {
+      resetState.allFlags[i].isClicked = false;
+    }
+
+    // Set app state to updated reset state and reset score to 0
+    this.setState(resetState);
     this.setState({ score: 0 });
-    console.log(this);
   }
 
   // Render function 
