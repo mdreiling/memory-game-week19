@@ -23,16 +23,19 @@ class App extends Component {
     this.setState({ selectedFlags: [] });
 
     const shuffleState = {...this.state};
-    console.log(shuffleState);
+    console.log(this.state.flags);
+    console.log(shuffleState.flags);
 
-    // // Set up shuffle function
-    // const shuffle = function(array) {
-    //   array.sort(() => Math.random() - 0.5);
-    // };
+    shuffleState.selectedFlags = shuffleState.flags;
 
-    // // Call shuffle function and pass in flagArray
-    // shuffle(flagArray);
-    // console.log(flagArray)
+    // Set up shuffle function
+    const shuffle = function(shuffleArray) {
+      shuffleArray.sort(() => Math.random() - 0.5);
+    };
+
+    // Call shuffle function and pass in flagArray
+    shuffle(shuffleState.flags);
+    console.log(shuffleState.flags);
     
 
     // // For loop to select random flags to display
@@ -44,7 +47,7 @@ class App extends Component {
     // this.setState({ selectedFlags: randomFlag });
 
     // Set selected flag array on state which will be used throughout app
-    this.setState({ selectedFlags: this.state.flags });
+    this.setState(shuffleState);
   };
 
   // Function to show a card has been clicked
@@ -62,8 +65,11 @@ class App extends Component {
       // Update app state with array 
       this.setState(clickedState);
       this.handleScore();
+      this.randomFlag();
+      // this.randomFlag();
     } else {
       this.gameReset();
+      // this.randomFlag();
     }
   };
 
@@ -96,7 +102,7 @@ class App extends Component {
       <Wrapper>
         <h2 className="title">World Flag Memory Game</h2>
         <h4 className="score">{this.state.score}</h4>
-        <div className="container">
+        <div>
           {this.state.selectedFlags.map((flag) => (
             <FlagCard
               handleClick = {this.handleClick}
