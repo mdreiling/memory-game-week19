@@ -12,11 +12,11 @@ class App extends Component {
 
   // Calling randomFlag function to initialize the game
   componentDidMount() {
-    this.randomFlag();
+    this.randomFlag(this.state.flags);
   }
   
   // Function to randomize cards that are being shown
-  randomFlag = () => {
+  randomFlag = shuffleArray => {
 
     // Reset Selected flags array on state
     this.setState({ selectedFlags: [] });
@@ -34,6 +34,7 @@ class App extends Component {
     // // Call shuffle function and pass in flagArray
     shuffle(toShuffleArray);
 
+
     let selectedFlags = [];
 
     // For loop to select first 16 flags in shuffled array
@@ -46,6 +47,7 @@ class App extends Component {
 
     // Set selected flag array on state which will be used throughout app
     this.setState({ selectedFlags: selectedFlags });
+
   };
 
   // Function to show a card has been clicked
@@ -66,11 +68,13 @@ class App extends Component {
       // Change status of clicked flag
       clickedState.flags[indexPosition].isClicked = true;
 
+
       // Update app state with array 
       this.setState(clickedState);
 
       this.handleScore();
       this.randomFlag();
+
     } else {
       this.gameReset();
       this.randomFlag();
