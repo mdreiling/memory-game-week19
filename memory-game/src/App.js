@@ -21,27 +21,33 @@ class App extends Component {
     // Reset Selected flags array on state
     this.setState({ selectedFlags: [] });
 
+    const shuffleState = {...this.state}
+
+    let toShuffleArray = []; 
+    toShuffleArray = shuffleState.flags;
+
     // Set up shuffle function
-    const shuffle = function(shuffleArray) {
-      shuffleArray.sort(() => Math.random() - 0.5);
+    const shuffle = function(toShuffle) {
+      toShuffle.sort(() => Math.random() - 0.5);
     };
 
-    // Call shuffle function and pass in flagArray
-    shuffle(shuffleArray);
-    console.log(this);
-    console.log(shuffleArray);
-    
+    // // Call shuffle function and pass in flagArray
+    shuffle(toShuffleArray);
 
-    // // For loop to select random flags to display
-    // for (var i = 0; i < 16; i++) {  
-    //   randomFlag.push(allFlags[Math.floor(Math.random()*allFlags.length)]);
-    // }
+
+    let selectedFlags = [];
+
+    // For loop to select first 16 flags in shuffled array
+    for (var i = 0; i < 16; i++) {  
+      selectedFlags.push(this.state.flags[i]);
+    }
 
     // // Set state of selected flags array with the newly made random flag array
     // this.setState({ selectedFlags: randomFlag });
 
     // Set selected flag array on state which will be used throughout app
-    this.setState({ selectedFlags: shuffleArray });
+    this.setState({ selectedFlags: selectedFlags });
+
   };
 
   // Function to show a card has been clicked
@@ -49,19 +55,29 @@ class App extends Component {
 
     // Create a duplicate of state so that the status of the clicked flag can be changed
     const clickedState = {...this.state};
+    // console.log(clickedCard.id);
+
+    let id = clickedCard.id
+
+    let indexPosition = this.state.flags.findIndex(flag => flag.id === id);
+    console.log(indexPosition);
 
     // If/else statement to handle game logic
     if (!clickedCard.isClicked) {
 
       // Change status of clicked flag
-      clickedState.flags[clickedCard.id-1].isClicked = true;
+      clickedState.flags[indexPosition].isClicked = true;
+
 
       // Update app state with array 
       this.setState(clickedState);
+
       this.handleScore();
-      this.randomFlag(this.state.flags);
+      this.randomFlag();
+
     } else {
       this.gameReset();
+      this.randomFlag();
       // this.randomFlag();
     }
   };
