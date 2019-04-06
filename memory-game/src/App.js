@@ -55,12 +55,10 @@ class App extends Component {
 
     // Create a duplicate of state so that the status of the clicked flag can be changed
     const clickedState = {...this.state};
-    // console.log(clickedCard.id);
 
     let id = clickedCard.id
 
     let indexPosition = this.state.flags.findIndex(flag => flag.id === id);
-    console.log(indexPosition);
 
     // If/else statement to handle game logic
     if (!clickedCard.isClicked) {
@@ -78,8 +76,8 @@ class App extends Component {
     } else {
       this.gameReset();
       this.randomFlag();
-      // this.randomFlag();
     }
+    
   };
 
   // Function to update the score when a previously unclicked flag is clicked
