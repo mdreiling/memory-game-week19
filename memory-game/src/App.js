@@ -10,23 +10,16 @@ class App extends Component {
     selectedFlags: []
   };
 
-
   // Calling randomFlag function to initialize the game
   componentDidMount() {
-    this.randomFlag();
+    this.randomFlag(this.state.flags);
   }
   
   // Function to randomize cards that are being shown
-  randomFlag = () => {
+  randomFlag = shuffleArray => {
 
     // Reset Selected flags array on state
     this.setState({ selectedFlags: [] });
-
-    const shuffleState = {...this.state};
-    console.log(this.state.flags);
-    console.log(shuffleState.flags);
-
-    shuffleState.selectedFlags = shuffleState.flags;
 
     // Set up shuffle function
     const shuffle = function(shuffleArray) {
@@ -34,8 +27,9 @@ class App extends Component {
     };
 
     // Call shuffle function and pass in flagArray
-    shuffle(shuffleState.flags);
-    console.log(shuffleState.flags);
+    shuffle(shuffleArray);
+    console.log(this);
+    console.log(shuffleArray);
     
 
     // // For loop to select random flags to display
@@ -47,7 +41,7 @@ class App extends Component {
     // this.setState({ selectedFlags: randomFlag });
 
     // Set selected flag array on state which will be used throughout app
-    this.setState(shuffleState);
+    this.setState({ selectedFlags: shuffleArray });
   };
 
   // Function to show a card has been clicked
@@ -60,13 +54,12 @@ class App extends Component {
     if (!clickedCard.isClicked) {
 
       // Change status of clicked flag
-      clickedState.selectedFlags[clickedCard.id-1].isClicked = true;
+      clickedState.flags[clickedCard.id-1].isClicked = true;
 
       // Update app state with array 
       this.setState(clickedState);
       this.handleScore();
-      this.randomFlag();
-      // this.randomFlag();
+      this.randomFlag(this.state.flags);
     } else {
       this.gameReset();
       // this.randomFlag();
@@ -87,8 +80,8 @@ class App extends Component {
     
     // For loop to change all flag's click status to false
     let i;
-    for (i = 0; i < resetState.selectedFlags.length; i++) {
-      resetState.selectedFlags[i].isClicked = false;
+    for (i = 0; i < resetState.flags.length; i++) {
+      resetState.flags[i].isClicked = false;
     }
 
     // Set app state to updated reset state and reset score to 0
