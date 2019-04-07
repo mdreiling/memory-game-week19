@@ -83,7 +83,15 @@ class App extends Component {
   // Function to update the score when a previously unclicked flag is clicked
   handleScore = () => {
     this.setState({ score: this.state.score + 1 });
+    this.highScore();
   };
+
+  // Function to update high score if needed
+  highScore = () => {
+    if (this.state.score >= this.state.highScore) {
+      this.setState({ highScore: this.state.score + 1 });
+    }
+  }
 
   // Function to reset the game when a flag is clicked for the second time
   gameReset = () => {

@@ -1,6 +1,6 @@
 {
   "name": "memory-game",
-  "homepage": "https://github.com/mdreiling/memory-game-week19.git",
+  "homepage": "https://mdreiling.github.io/memory-game-week19",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
